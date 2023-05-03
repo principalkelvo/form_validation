@@ -1,12 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+      <style>
+      .error {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Form Validation Example</h1>
+    <form name="myForm" id="myForm" action="/" method="post" onsubmit="return validateForm()">
+      <label for="firstName">First Name:</label>
+      <input type="text" id="firstName" required />
+
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" required />
+
+      <label for="phoneNumber">Phone Number:</label>
+      <input type="number" id="phoneNumber" required />
+
+      <label for="dateOfBirth">Date of Birth:</label>
+      <input type="date" id="dateOfBirth" required />
+
+      <label for="emailAddress">Email Address:</label>
+      <input type="email" id="emailAddress" required />
+
+      <input type="submit" value="Submit" />
+    </form>
+    <div id="output"></div>
+    <div id="error-messages"></div>
+    <script src="script.js"></script>
+  </body>
 </html>
